@@ -8,4 +8,4 @@ RUN apt-get -q=2 update && apt-get --no-install-recommends --show-progress -q=2 
         apt-get clean && \
         rm -rf /var/lib/apt/lists/*
 
-CMD [ "/usr/sbin/cron","-f","-L /dev/stdout" ]
+CMD [ "/usr/sbin/cron", "-f", "-L8" ]
