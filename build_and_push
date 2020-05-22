@@ -1,0 +1,4 @@
+#!/bin/bash
+docker build -t abrakadabra21099/cron -t abrakadabra21099/cron:0.3 . && \
+docker push abrakadabra21099/cron:0.3 && \
+docker push abrakadabra21099/cron

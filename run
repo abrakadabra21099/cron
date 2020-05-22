@@ -1,0 +1,8 @@
+#!/bin/bash
+docker run -d --name cron --restart unless-stopped \
+-v /srv/cron/crontab:/etc/crontab \
+-v /srv/cron/tasks:/tasks \
+-v /srv/cron/logs:/var/log \
+-v /srv/cron/id_rsa:/root/.ssh/id_rsa:ro \
+-v /srv/cron/id_rsa.pub:/root/.ssh/id_rsa.pub:ro \
+abrakadabra21099/cron && docker logs -f cron
